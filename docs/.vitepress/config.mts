@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 17:17:45
+ * @LastEditTime: 2024-07-01 17:31:54
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -120,7 +120,12 @@ export default defineConfig({
                 items: [
                   {
                     text: "Vue",
-                    link: "/content/frontend/web/vue/",
+                    items: [
+                      {
+                        text: "前端下载文件并存入指定目录",
+                        link: "/content/frontend/web/vue/前端下载文件并存入指定目录.md",
+                      },
+                    ],
                   },
                   {
                     text: "React",
