@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 17:31:54
+ * @LastEditTime: 2024-07-01 17:56:36
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -120,16 +120,35 @@ export default defineConfig({
                 items: [
                   {
                     text: "Vue",
+                    collapsed: true,
                     items: [
                       {
                         text: "前端下载文件并存入指定目录",
                         link: "/content/frontend/web/vue/前端下载文件并存入指定目录.md",
                       },
+                      {
+                        text: "卡片悬浮发光hooks",
+                        link: "/content/frontend/web/vue/卡片悬浮发光hooks.md",
+                      },
+                      {
+                        text: "ElementPlus Dialog弹出框在有滚动条的页面引发的问题",
+                        link: "/content/frontend/web/vue/ElementPlus Dialog弹出框在有滚动条的页面引发的问题.md",
+                      },
+                      {
+                        text: "vue3 wangEditor富文本回显CSS",
+                        link: "/content/frontend/web/vue/vue3 wangEditor富文本回显CSS.md",
+                      },
                     ],
                   },
                   {
                     text: "React",
-                    link: "/content/frontend/web/react/",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "1",
+                        link: "/content/frontend/web/react/",
+                      },
+                    ],
                   },
                 ],
               },
@@ -139,7 +158,12 @@ export default defineConfig({
                 items: [
                   {
                     text: "Uniapp",
-                    link: "/content/frontend/mobile/uniapp/",
+                    items: [
+                      {
+                        text: "11",
+                        link: "/content/frontend/mobile/uniapp/",
+                      },
+                    ],
                   },
                   {
                     text: "React Native",
