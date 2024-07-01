@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 16:28:46
+ * @LastEditTime: 2024-07-01 16:33:47
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -10,12 +10,12 @@ import { defineConfig } from "vitepress"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "我不是游神",
-  base: "/docs/",
+  base: "./",
   description: "我不是游神",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "首页", link: "/" },
+      { text: "首页", link: "/docs/content/" },
       {
         text: "前端",
         items: [
@@ -24,11 +24,11 @@ export default defineConfig({
             items: [
               {
                 text: "Vue",
-                link: "/content/frontend/web/vue/",
+                link: "/docs/content/frontend/web/vue/",
               },
               {
                 text: "React",
-                link: "/content/frontend/web/react/",
+                link: "/docs/content/frontend/web/react/",
               },
             ],
           },
