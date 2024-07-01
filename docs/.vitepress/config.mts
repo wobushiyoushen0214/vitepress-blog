@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 17:15:36
+ * @LastEditTime: 2024-07-01 17:17:45
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -14,6 +14,34 @@ export default defineConfig({
   description: "我不是游神",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    lastUpdated: {
+      // 更新时间的显示
+      text: "更新于",
+      formatOptions: {
+        dateStyle: "medium",
+        timeStyle: "medium",
+      },
+    },
+    search: {
+      // 搜索
+      provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
+          },
+          modal: {
+            noResultsText: "无法找到相关结果",
+            resetButtonTitle: "清除查询条件",
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+            },
+          },
+        },
+      },
+    },
     nav: [
       { text: "首页", link: "/" },
       {
