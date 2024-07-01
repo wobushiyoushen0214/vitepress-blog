@@ -2,14 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 11:58:16
- * @Descripttion:
- */
-/*
- * @Author: LiZhiWei
- * @Date: 2024-06-28 14:59:46
- * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 11:08:14
+ * @LastEditTime: 2024-07-01 16:15:05
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -17,6 +10,7 @@ import { defineConfig } from "vitepress"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "我不是游神",
+  base: "./",
   description: "我不是游神",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
