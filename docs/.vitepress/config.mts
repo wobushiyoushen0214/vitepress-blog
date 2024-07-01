@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 16:33:47
+ * @LastEditTime: 2024-07-01 16:36:24
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -15,7 +15,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "首页", link: "/docs/content/" },
+      { text: "首页", link: "/" },
       {
         text: "前端",
         items: [
