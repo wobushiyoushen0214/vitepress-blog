@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-06-28 14:59:46
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 16:15:05
+ * @LastEditTime: 2024-07-01 16:22:19
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -24,7 +24,7 @@ export default defineConfig({
             items: [
               {
                 text: "Vue",
-                link: "/content/frontend/web/vue/",
+                link: "../content/frontend/web/vue/",
               },
               {
                 text: "React",
