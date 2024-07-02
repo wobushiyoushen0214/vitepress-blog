@@ -5,7 +5,7 @@ readingTime: true
 tag:
   - 文章
 # recommend: 1
-
+sticky: 2
 top: 1
 ---
 
