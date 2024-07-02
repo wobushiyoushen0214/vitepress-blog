@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-07-02 11:54:59
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-02 14:37:48
+ * @LastEditTime: 2024-07-02 16:14:56
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -54,6 +54,23 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
+      {
+        text: "前端",
+        items: [
+          {
+            text: "vue",
+            link: "/content/frontend/vue/wangEditor富文本回显css.md",
+          },
+          {
+            text: "react",
+            link: "/content/frontend/react",
+          },
+          {
+            text: "uniapp",
+            link: "/content/frontend/uniapp/云打包报错问题.md",
+          },
+        ],
+      },
       { text: "关于作者", link: "" },
     ],
     socialLinks: [
