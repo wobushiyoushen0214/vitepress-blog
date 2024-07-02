@@ -1,5 +1,3 @@
----
-
 ## description: 默认支持流程图，tabs 面板，待办列表，作品页面
 
 # 内置第三方插件能力
@@ -333,13 +331,11 @@ gantt
 
 ```md
 ---
-
 layout: page
 title: 个人作品展示
 sidebar: false
 outline: [2, 3]
 sticky: 1
-
 ---
 
 <UserWorksPage />
