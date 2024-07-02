@@ -1,15 +1,13 @@
 ---
-
 description: utils
 title: 解决 html2canvas 导出图片文字向下偏移问题
 readingTime: true
 tag:
-
-- 文章
-
+  - 文章
 # recommend: 1
 
-## top: 1
+top: 1
+---
 
 1. 修改 node_module -> html2canvas 并修改 dist 目录下 html2canvas.esm.js 中的 FontMetrics 函数
 
