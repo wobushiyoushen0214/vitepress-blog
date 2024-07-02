@@ -1,4 +1,11 @@
-<h1 align="center"> VitePress @sugarat/theme </h1>
+<!--
+ * @Author: LiZhiWei
+ * @Date: 2024-07-02 11:54:59
+ * @LastEditors: LiZhiWei
+ * @LastEditTime: 2024-07-02 14:30:10
+ * @Descripttion:
+-->
+<h1 align="center"> 基于 VitePress @sugarat/theme </h1>
 
 <p align="center">
 简约风的 <a href="https://theme.sugarat.top"  target="_blank"target="_blank">VitePress 博客主题</a> 示例运行项目。
@@ -58,7 +65,7 @@ pnpm serve
 
 ```ts
 // 省略无关代码
-const base = '/vitepress-blog-sugar-template/'
+const base = "/vitepress-blog-sugar-template/"
 export default defineConfig({
   base,
 })
