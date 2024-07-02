@@ -2,7 +2,7 @@
  * @Author: LiZhiWei
  * @Date: 2024-07-02 11:54:59
  * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-02 16:14:56
+ * @LastEditTime: 2024-07-02 16:31:27
  * @Descripttion:
  */
 import { defineConfig } from "vitepress"
@@ -68,6 +68,14 @@ export default defineConfig({
           {
             text: "uniapp",
             link: "/content/frontend/uniapp/云打包报错问题.md",
+          },
+          {
+            text: "flutter",
+            link: "/content/frontend/flutter/mac安装flutter开发环境.md",
+          },
+          {
+            text: "utils",
+            link: "/content/frontend/utils/前端下载文件并存入指定目录.md",
           },
         ],
       },

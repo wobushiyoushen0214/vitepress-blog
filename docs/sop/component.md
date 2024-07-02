@@ -1,11 +1,3 @@
-<!--
- * @Author: LiZhiWei
- * @Date: 2024-07-02 11:54:59
- * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-02 16:23:42
- * @Descripttion:
--->
-
 ---
 
 ## description: 默认支持流程图，tabs 面板，待办列表，作品页面
@@ -341,11 +333,13 @@ gantt
 
 ```md
 ---
+
 layout: page
 title: 个人作品展示
 sidebar: false
 outline: [2, 3]
 sticky: 1
+
 ---
 
 <UserWorksPage />
