@@ -1,215 +1,58 @@
-/*
- * @Author: LiZhiWei
- * @Date: 2024-06-28 14:59:46
- * @LastEditors: LiZhiWei
- * @LastEditTime: 2024-07-01 17:56:36
- * @Descripttion:
- */
-import { defineConfig } from "vitepress"
+import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
+// 导入主题的配置
+import { blogTheme } from './blog-theme'
+
+// 如果使用 GitHub/Gitee Pages 等公共平台部署
+// 通常需要修改 base 路径，通常为“/仓库名/”
+// 如果项目名已经为 name.github.io 域名，则不需要修改！
+// const base = process.env.GITHUB_ACTIONS === 'true'
+//   ? '/vitepress-blog-sugar-template/'
+//   : '/'
+
+// Vitepress 默认配置
+// 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "我不是游神",
-  base: "/vitepress-blog/",
-  description: "我不是游神",
+  // 继承博客主题(@sugarat/theme)
+  extends: blogTheme,
+  // base,
+  lang: 'zh-cn',
+  title: '@sugarat/theme',
+  description: '粥里有勺糖的博客主题，基于 vitepress 实现',
+  lastUpdated: true,
+  // 详见：https://vitepress.dev/zh/reference/site-config#head
+  head: [
+    // 配置网站的图标（显示在浏览器的 tab 上）
+    // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    lastUpdated: {
-      // 更新时间的显示
-      text: "更新于",
-      formatOptions: {
-        dateStyle: "medium",
-        timeStyle: "medium",
-      },
+    // 展示 2,3 级标题在目录中
+    outline: {
+      level: [2, 3],
+      label: '目录'
     },
-    search: {
-      // 搜索
-      provider: "local",
-      options: {
-        translations: {
-          button: {
-            buttonText: "搜索文档",
-            buttonAriaLabel: "搜索文档",
-          },
-          modal: {
-            noResultsText: "无法找到相关结果",
-            resetButtonTitle: "清除查询条件",
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-            },
-          },
-        },
-      },
-    },
+    // 默认文案修改
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '相关文章',
+    lastUpdatedText: '上次更新于',
+
+    // 设置logo
+    logo: '/logo.png',
+    // editLink: {
+    //   pattern:
+    //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
+    //   text: '去 GitHub 上编辑内容'
+    // },
     nav: [
-      { text: "首页", link: "/" },
-      {
-        text: "前端",
-        items: [
-          {
-            text: "Web框架",
-            items: [
-              {
-                text: "Vue",
-                link: "/content/frontend/web/vue/",
-              },
-              {
-                text: "React",
-                link: "/content/frontend/web/react/",
-              },
-            ],
-          },
-          {
-            text: "移动端",
-            items: [
-              {
-                text: "Uniapp",
-                link: "./content/frontend/mobile/uniapp/",
-              },
-              {
-                text: "React Native",
-                link: "./content/frontend/mobile/react-native/",
-              },
-              {
-                text: "Flutter",
-                link: "/content/frontend/mobile/flutter/",
-              },
-              {
-                text: "Kotlin Multiplatform",
-                link: "/content/frontend/mobile/kotlin-multiplatform",
-              },
-            ],
-          },
-          {
-            text: "前端基础",
-            items: [
-              {
-                text: "TypeScript",
-                link: "/content/frontend/basics/typescript",
-              },
-              {
-                text: "JavaScript",
-                link: "/content/frontend/basics/javascript",
-              },
-              {
-                text: "Html",
-                link: "/content/frontend/basics/html",
-              },
-              {
-                text: "Css",
-                link: "/content/frontend/basics/css",
-              },
-            ],
-          },
-        ],
-      },
-      { text: "后端", items: [] },
+      { text: '首页', link: '/' },
+      { text: '关于作者', link: 'https://sugarat.top/aboutme.html' }
     ],
-
-    sidebar: [
-      {
-        text: "",
-        items: [
-          {
-            text: "前端",
-            items: [
-              {
-                text: "Web框架",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Vue",
-                    collapsed: true,
-                    items: [
-                      {
-                        text: "前端下载文件并存入指定目录",
-                        link: "/content/frontend/web/vue/前端下载文件并存入指定目录.md",
-                      },
-                      {
-                        text: "卡片悬浮发光hooks",
-                        link: "/content/frontend/web/vue/卡片悬浮发光hooks.md",
-                      },
-                      {
-                        text: "ElementPlus Dialog弹出框在有滚动条的页面引发的问题",
-                        link: "/content/frontend/web/vue/ElementPlus Dialog弹出框在有滚动条的页面引发的问题.md",
-                      },
-                      {
-                        text: "vue3 wangEditor富文本回显CSS",
-                        link: "/content/frontend/web/vue/vue3 wangEditor富文本回显CSS.md",
-                      },
-                    ],
-                  },
-                  {
-                    text: "React",
-                    collapsed: true,
-                    items: [
-                      {
-                        text: "1",
-                        link: "/content/frontend/web/react/",
-                      },
-                    ],
-                  },
-                ],
-              },
-              {
-                text: "移动端",
-                collapsed: true,
-                items: [
-                  {
-                    text: "Uniapp",
-                    items: [
-                      {
-                        text: "11",
-                        link: "/content/frontend/mobile/uniapp/",
-                      },
-                    ],
-                  },
-                  {
-                    text: "React Native",
-                    link: "/content/frontend/mobile/react-native/",
-                  },
-                  {
-                    text: "Flutter",
-                    link: "/content/frontend/mobile/flutter/",
-                  },
-                  {
-                    text: "Kotlin Multiplatform",
-                    link: "/content/frontend/mobile/kotlin-multiplatform/",
-                  },
-                ],
-              },
-              {
-                text: "前端基础",
-                collapsed: true,
-                items: [
-                  {
-                    text: "TypeScript",
-                    link: "/content/frontend/basics/typescript/",
-                  },
-                  {
-                    text: "JavaScript",
-                    link: "/content/frontend/basics/javascript/",
-                  },
-                  {
-                    text: "Html",
-                    link: "/content/frontend/basics/html/",
-                  },
-                  {
-                    text: "Css",
-                    link: "/content/frontend/basics/css/",
-                  },
-                ],
-              },
-            ],
-          },
-          { text: "后端", items: [] },
-        ],
-      },
-    ],
-
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
-  },
+      {
+        icon: 'github',
+        link: 'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme'
+      }
+    ]
+  }
 })
