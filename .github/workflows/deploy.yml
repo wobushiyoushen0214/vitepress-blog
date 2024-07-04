@@ -37,7 +37,7 @@ jobs:
     # node v20 运行
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [18]
 
     steps:
       # 拉取代码
@@ -59,7 +59,7 @@ jobs:
         name: Install pnpm
         with:
           version: latest
-          # version: 9
+          # version: 8
           run_install: false
 
         # 安装依赖
