@@ -60,7 +60,7 @@ jobs:
         with:
           # version: latest
           version: 9
-          run_install: false
+          run_install: true
 
         # 安装依赖
       - name: Install dependencies
